@@ -54,7 +54,9 @@ public class Book {
                 ']';
     }
 
-/*    public StringBuilder getAuthorNames (){
+/*  В случае большого числа авторов при конкатенации будет создаваться много строк, так как объеты String
+    неизмениемые, то выгоднее использовать StringBuilder
+    public StringBuilder getAuthorNames (){
         StringBuilder authorsName = new StringBuilder();
         for (Author temp: authors){
             authorsName.append(temp.getName()).append(" ");
